@@ -10,6 +10,18 @@ var form, player, game;
 
 var cars, car1, car2, car3, car4;
 
+var track_img, car1img, car2img, car3img, car4img;
+
+function preload(){
+   track_img = loadImage("images/track.jpg");//relative path
+   //car1img = loadImage("C:\Users\karym\OneDrive\Documents\Coding\C-39\CarRacingStage1.5\images\car1.png");//absolute path
+   //car2img = loadImage("C:\Users\karym\OneDrive\Documents\Coding\C-39\CarRacingStage1.5\images\car2.png");
+   car1img = loadImage("images/car1.png");
+   car2img = loadImage("images/car2.png");
+   car3img = loadImage("images/car3.png");
+   car4img = loadImage("images/car4.png");
+
+}
 
 function setup(){
   canvas = createCanvas(displayWidth - 20, displayHeight-30);
@@ -27,5 +39,8 @@ function draw(){
   if(gameState === 1){
     clear();
     game.play();
+  }
+  if(gameState === 2){
+    game.end();
   }
 }
